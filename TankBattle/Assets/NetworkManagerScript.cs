@@ -5,15 +5,39 @@ using Photon.Pun;
 
 public class NetworkManagerScript : MonoBehaviourPunCallbacks
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public static NetworkManagerScript instance;
+    void Awake(){
+        if(instance!=null && instance != this){
+            gameObject.SetActive(false);
+        }
+        else{
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Start(){
+        PhotonNetwork.ConnectUsingSettings();
+    }
+
+    public override void OnConnectedToMaster(){
+        Debug.Log("Connected to Master Server");
+        CreateRoom("testRoom");
+    }
+
+    public override void OnCreatedRoom(){
+        Debug.Log("Created room: " + PhotonNetwork.CurrentRoom.Name);
+    }
+
+    public void CreateRoom(string roomName){
+        PhotonNetwork.CreateRoom(roomName);
+    }
+
+    public void JoinRoom(string roomName){
+        PhotonNetwork.JoinRoom(roomName);
+    }
+
+    public void ChangeScene(string sceneName){
+        PhotonNetwork.LoadLevel(sceneName);
     }
 }
