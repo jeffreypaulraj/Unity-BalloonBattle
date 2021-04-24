@@ -22,7 +22,7 @@ public class NetworkManagerScript : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster(){
         Debug.Log("Connected to Master Server");
-        CreateRoom("testRoom");
+        PhotonNetwork.JoinOrCreateRoom("testRoom",null,null,null);
     }
 
     public override void OnCreatedRoom(){
