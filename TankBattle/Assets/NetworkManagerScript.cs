@@ -6,6 +6,7 @@ using Photon.Pun;
 public class NetworkManagerScript : MonoBehaviourPunCallbacks
 {
     public static NetworkManagerScript instance;
+    
     void Awake(){
         if(instance!=null && instance != this){
             gameObject.SetActive(false);
@@ -22,7 +23,7 @@ public class NetworkManagerScript : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster(){
         Debug.Log("Connected to Master Server");
-        PhotonNetwork.JoinOrCreateRoom("testRoom",null,null,null);
+        //PhotonNetwork.JoinOrCreateRoom("testRoom",null,null,null);
     }
 
     public override void OnCreatedRoom(){
@@ -37,7 +38,16 @@ public class NetworkManagerScript : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRoom(roomName);
     }
 
+    public void JoinOrCreateRoom(string roomName)
+    {
+        PhotonNetwork.JoinOrCreateRoom(roomName, null, null, null);
+    }
     public void ChangeScene(string sceneName){
         PhotonNetwork.LoadLevel(sceneName);
+    }
+
+    public void Update()
+    {
+        
     }
 }

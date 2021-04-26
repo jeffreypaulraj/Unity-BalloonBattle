@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{FA470E05-34A9-DF96-F3A0-23198318BFE5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NetworkManagerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MenuManagerScript.cs">
     <Files>
-      <File FileName="Assets/NetworkManagerScript.cs" Line="18" Column="1" />
+      <File FileName="Assets/NetworkManagerScript.cs" Line="41" Column="22" />
+      <File FileName="Assets/MenuManagerScript.cs" Line="11" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TankBattle" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="NetworkManagerScript.cs" selected="True" />
+              <Node name="MenuManagerScript.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -17,7 +18,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fd719f4a-00c8-4a85-8f52-627afac029e2" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ba5fd744-0489-493a-97b7-84d19c496ec8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
