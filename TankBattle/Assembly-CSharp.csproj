@@ -64,11 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
-    <Compile Include="Assets\JoinOrCreateRoomScript.cs" />
-    <Compile Include="Assets\MenuManagerScript.cs" />
-    <Compile Include="Assets\NetworkManagerScript.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
+    <Compile Include="Assets\Scripts\JoinOrCreateRoomScript.cs" />
+    <Compile Include="Assets\Scripts\MenuManagerScript.cs" />
+    <Compile Include="Assets\Scripts\NetworkManagerScript.cs" />
     <Compile Include="Assets\World Portal System Package\Scripts\CrossPlatformInputManager.cs" />
     <Compile Include="Assets\World Portal System Package\Scripts\CurveControlledBob.cs" />
     <Compile Include="Assets\World Portal System Package\Scripts\HeadBob.cs" />
