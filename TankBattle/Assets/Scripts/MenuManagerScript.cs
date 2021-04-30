@@ -12,10 +12,22 @@ public class MenuManagerScript : MonoBehaviourPunCallbacks
     public InputField codeInputField;
     public InputField nameField;
     public Text playerCountText;
-    public Text playerList;
+
+    public Text playerListText;
+    public Text roomCodeText;
+
+    public Button roomNextButton;
+    public Button playerNextButton;
+
     public static MenuManagerScript instance;
     bool gameCreated;
     int playerCount;
+
+    int playerDisplayCount;
+    int roomDisplayCount;
+
+    List<string> playerList;
+    List<string> roomsList;
 
     void Awake() {
         if (instance != null && instance != this) {
@@ -31,18 +43,69 @@ public class MenuManagerScript : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
         joinCreateButton.onClick.AddListener(JoinCreateRoom);
         startButton.onClick.AddListener(StartGameCheck);
+        roomNextButton.onClick.AddListener(nextRoom);
+        playerNextButton.onClick.AddListener(nextPlayer);
         gameCreated = false;
         playerCount = 0;
+
+        playerList = new List<string>();
+        roomsList = new List<string>();
+
+        playerList.Add("Players");
+        roomsList.Add("Rooms Available");
+
+        playerDisplayCount = 0;
+        roomDisplayCount = 0;
     }
 
     public override void OnCreatedRoom(){
         Debug.Log("Created room: " + PhotonNetwork.CurrentRoom.Name);
     }
 
+    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
+    {
+        playerList.Add(newPlayer.NickName);
+        playerCount = PhotonNetwork.CountOfPlayers;
+        playerCountText.text = "Number of Players in Room: " + playerCount;
+    }
+
+    public override void OnRoomListUpdate(List<Photon.Realtime.RoomInfo> roomList)
+    {
+        roomsList = new List<string>();
+        roomsList.Add("Rooms Available");
+
+        foreach(Photon.Realtime.RoomInfo room in roomList)
+        {
+            roomsList.Add(room.Name + " (" + room.PlayerCount + " Players)");
+        }
+    }
+
     public void JoinOrCreateRoom(string roomName) {
         PhotonNetwork.JoinOrCreateRoom(roomName, null, null, null);
         PhotonNetwork.LocalPlayer.NickName = nameField.text;
+        playerCount = PhotonNetwork.CountOfPlayers;
+        playerCountText.text = "Number of Players in Room: " + playerCount;
         gameCreated = true;
+    }
+
+    public void nextRoom()
+    {
+        Debug.Log("Method 1 Called");
+        roomDisplayCount++;
+        if(roomDisplayCount >= roomsList.Count){
+            roomDisplayCount = 0;
+        }
+        roomCodeText.text = roomsList[roomDisplayCount];
+    }
+
+    public void nextPlayer()
+    {
+        Debug.Log("Method 2 Called");
+        playerDisplayCount++;
+        if(playerDisplayCount >= playerList.Count){
+            playerDisplayCount = 0;
+        }
+        playerListText.text = playerList[playerDisplayCount];
     }
 
     public void ChangeScene() {
@@ -58,13 +121,12 @@ public class MenuManagerScript : MonoBehaviourPunCallbacks
 
     void Update(){
         if (gameCreated){
-            playerCount = PhotonNetwork.CountOfPlayers;
-            playerCountText.text = "Number of Players in Room: " + playerCount;
+            
             string playerListString = "";
-            foreach (var player in PhotonNetwork.PlayerList) {
-                playerListString += player.NickName + "\n";
-            }
-            playerList.text = playerListString;
+            //foreach (var player in PhotonNetwork.PlayerList) {
+            //    playerListString += player.NickName + "\n";
+            //}
+            //playerList.text = playerListString;
 
         }
     }
