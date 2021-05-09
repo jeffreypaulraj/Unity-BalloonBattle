@@ -20,16 +20,17 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         if (instance != null && instance != this){
             gameObject.SetActive(false);
         }
-        else{
+        else {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
         }
     }
 
     void Start(){
-        PhotonNetwork.ConnectUsingSettings();
+        //PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.AutomaticallySyncScene = true;
-        cars = new GameObject[PhotonNetwork.CountOfPlayers];
+        cars = new GameObject[2];
         cars[0] = carOne;
         cars[1] = carTwo;
 
@@ -43,7 +44,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     }
 
     void Update(){
-        PhotonNetwork.LocalPlayer.CustomProperties.Clear();
+        //PhotonNetwork.LocalPlayer.CustomProperties.Clear();
         ExitGames.Client.Photon.Hashtable propertyHash = new ExitGames.Client.Photon.Hashtable();
         propertyHash.Add("Position", cars[playerIndex].transform.position);
         propertyHash.Add("Rotation", cars[playerIndex].transform.rotation);
@@ -51,9 +52,12 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
 
         int count = 0;
         foreach(Player player in PhotonNetwork.PlayerList){
-            cars[count].transform.position = (Vector3)player.CustomProperties["Position"];
-            cars[count].transform.rotation = (Quaternion)player.CustomProperties["Rotation"];
+            if (!player.Equals(PhotonNetwork.LocalPlayer)){
+                cars[count].transform.position = (Vector3)player.CustomProperties["Position"];
+                cars[count].transform.rotation = (Quaternion)player.CustomProperties["Rotation"];
+            }
             count++;
+
         }
 
     }
@@ -61,8 +65,13 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         breaking = Input.GetKey(KeyCode.Space);
+        //applyMovement(cars[playerIndex]);
+
         if (Input.GetKey(KeyCode.LeftArrow)){
             cars[playerIndex].transform.Translate(Vector3.left);
+            //if(cars[playerIndex].transform.rotation.eulerAngles.x > -90){
+            //    cars[playerIndex].transform.Rotate(new Vector3(0, -1, 0));
+            //}
         }
         else if (Input.GetKey(KeyCode.RightArrow)){
             cars[playerIndex].transform.Translate(Vector3.right);
@@ -74,6 +83,10 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             cars[playerIndex].transform.Translate(Vector3.back);
         }
         Rigidbody rb = this.gameObject.transform.GetComponent<Rigidbody>();
+
+    }
+    void applyMovement(GameObject car)
+    {
 
     }
 }

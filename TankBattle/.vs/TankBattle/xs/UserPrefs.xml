@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{FA470E05-34A9-DF96-F3A0-23198318BFE5}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CarMovementScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/MenuManagerScript.cs" Line="60" Column="6" />
-      <File FileName="Assets/Scripts/CarMovementScript.cs" Line="50" Column="69" />
+      <File FileName="Assets/Scripts/MenuManagerScript.cs" Line="22" Column="34" />
+      <File FileName="Assets/Scripts/CarMovementScript.cs" Line="54" Column="23" />
+      <File FileName="Assets/Scripts/NetworkManagerScript.cs" Line="11" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TankBattle" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="CarMovementScript.cs" selected="True" />
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="CarMovementScript.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -20,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="10bd9f32-393b-4931-9ee0-9ef6347a50db" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1c89cd00-d85c-4c71-8fb1-4a6cc220d884" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
