@@ -5,27 +5,27 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637561831820000000
-    m_Hash: 1641546182
+      ticks: 637562548900000000
+    m_Hash: 661476423
   m_LockFileStatus:
     m_FilePath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637561831840000000
-    m_Hash: 1049041275
+      ticks: 637562548930000000
+    m_Hash: 1171498508
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.unity.collab-proxy@1.3.9
+    - packageId: com.unity.collab-proxy@1.2.16
       testable: 0
       isDirectDependency: 1
-      version: 1.3.9
+      version: 1.2.16
       source: 1
-      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.collab-proxy@1.3.9
+      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.collab-proxy@1.2.16
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
       displayName: Unity Collaborate
@@ -33,11 +33,10 @@ m_PackageAssets:
         name: 
         email: 
         url: 
-      category: Editor
+      category: 
       type: 
-      description: Collaborate with your teammates with the official version control
-        system for Unity. Collaborate is a simple way for teams to save, share, and
-        sync your Unity project.
+      description: Collaborate is a simple way for teams to save, share, and sync
+        their Unity project
       status: 4
       errors: []
       versions:
@@ -87,11 +86,7 @@ m_PackageAssets:
       dependencies: []
       resolvedDependencies: []
       keywords:
-      - vsc
-      - version
-      - control
       - collab
-      - collaboration
       - collaborate
       - teams
       - team
@@ -109,32 +104,32 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637314349270000000
+      datePublishedTicks: 636898892010000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-        revision: fa825106f349f996acff22f718845eab46ca2d7c
+        url: https://gitlab.cds.internal.unity3d.com/upm-packages/cloud-services/collab-proxy.git
+        revision: 070e173b6a36e1d6097b1d95e09c08840c23f6ca
         path: 
-    - packageId: com.unity.ide.rider@2.0.7
+    - packageId: com.unity.ide.rider@1.1.4
       testable: 0
       isDirectDependency: 1
-      version: 2.0.7
+      version: 1.1.4
       source: 1
-      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ide.rider@2.0.7
+      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ide.rider@1.1.4
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
-      displayName: JetBrains Rider Editor
+      displayName: Rider Editor
       author:
         name: 
         email: 
         url: 
       category: 
       type: 
-      description: The JetBrains Rider Editor package provides an integration for
-        using the JetBrains Rider IDE as a code editor for Unity. It adds support
-        for generating .csproj files for code completion and auto-discovery of installations.
+      description: Code editor integration for supporting Rider as code editor for
+        unity. Adds support for generating csproj files for code completion, auto
+        discovery of installations, etc.
       status: 4
       errors: []
       versions:
@@ -194,9 +189,9 @@ m_PackageAssets:
         version: 1.1.1
       resolvedDependencies:
       - name: com.unity.test-framework
-        version: 1.1.24
+        version: 1.1.18
       - name: com.unity.ext.nunit
-        version: 1.0.6
+        version: 1.0.0
       - name: com.unity.modules.imgui
         version: 1.0.0
       - name: com.unity.modules.jsonserialize
@@ -214,101 +209,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637334461080000000
+      datePublishedTicks: 637100389670000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-        revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
+        url: git@github.cds.internal.unity3d.com:unity/com.unity.ide.rider.git
+        revision: d2ef95989104a4ce866cdcb7f94cf3c67476fcc9
         path: 
-    - packageId: com.unity.ide.visualstudio@2.0.7
+    - packageId: com.unity.ide.vscode@1.2.2
       testable: 0
       isDirectDependency: 1
-      version: 2.0.7
+      version: 1.2.2
       source: 1
-      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ide.visualstudio@2.0.7
-      assetPath: Packages/com.unity.ide.visualstudio
-      name: com.unity.ide.visualstudio
-      displayName: Visual Studio Editor
-      author:
-        name: 
-        email: 
-        url: 
-      category: 
-      type: 
-      description: Code editor integration for supporting Visual Studio as code editor
-        for unity. Adds support for generating csproj files for intellisense purposes,
-        auto discovery of installations, etc.
-      status: 4
-      errors: []
-      versions:
-        all:
-        - 1.0.2
-        - 1.0.3
-        - 1.0.4
-        - 1.0.9
-        - 1.0.10
-        - 1.0.11
-        - 2.0.0
-        - 2.0.1
-        - 2.0.2
-        - 2.0.3
-        - 2.0.5
-        - 2.0.7
-        compatible:
-        - 1.0.2
-        - 1.0.3
-        - 1.0.4
-        - 1.0.9
-        - 1.0.10
-        - 1.0.11
-        - 2.0.0
-        - 2.0.1
-        - 2.0.2
-        - 2.0.3
-        - 2.0.5
-        - 2.0.7
-        verified: 2.0.7
-      dependencies:
-      - name: com.unity.test-framework
-        version: 1.1.9
-      resolvedDependencies:
-      - name: com.unity.test-framework
-        version: 1.1.24
-      - name: com.unity.ext.nunit
-        version: 1.0.6
-      - name: com.unity.modules.imgui
-        version: 1.0.0
-      - name: com.unity.modules.jsonserialize
-        version: 1.0.0
-      keywords: []
-      registry:
-        id: main
-        name: 
-        url: https://packages.unity.com
-        scopes: []
-        isDefault: 1
-        capabilities: 7
-      hasRegistry: 1
-      hideInEditor: 1
-      entitlements:
-        isAllowed: 1
-      isAssetStorePackage: 0
-      datePublishedTicks: 637486638490000000
-      documentationUrl: 
-      hasRepository: 1
-      repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-        revision: dec282022c7a95fada560c36f53da9dd155a142c
-        path: 
-    - packageId: com.unity.ide.vscode@1.2.3
-      testable: 0
-      isDirectDependency: 1
-      version: 1.2.3
-      source: 1
-      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ide.vscode@1.2.3
+      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ide.vscode@1.2.2
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
       displayName: Visual Studio Code Editor
@@ -364,20 +278,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637394922300000000
+      datePublishedTicks: 637356850590000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-        revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
+        revision: d4564dab663617ea31f5782b365961d5304bed3c
         path: 
-    - packageId: com.unity.test-framework@1.1.24
+    - packageId: com.unity.test-framework@1.1.18
       testable: 0
       isDirectDependency: 1
-      version: 1.1.24
+      version: 1.1.18
       source: 1
-      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.test-framework@1.1.24
+      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.test-framework@1.1.18
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
       displayName: Test Framework
@@ -425,14 +339,14 @@ m_PackageAssets:
         verified: 1.1.24
       dependencies:
       - name: com.unity.ext.nunit
-        version: 1.0.6
+        version: 1.0.0
       - name: com.unity.modules.imgui
         version: 1.0.0
       - name: com.unity.modules.jsonserialize
         version: 1.0.0
       resolvedDependencies:
       - name: com.unity.ext.nunit
-        version: 1.0.6
+        version: 1.0.0
       - name: com.unity.modules.imgui
         version: 1.0.0
       - name: com.unity.modules.jsonserialize
@@ -452,20 +366,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637505702940000000
+      datePublishedTicks: 637378481950000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git+https://github.com/Unity-Technologies/com.unity.test-framework.git
-        revision: e6fe8892689398c0d9aba4587e0ba69edc3d82b8
+        revision: 14025b364215f4465cbe1beb7a81e486b2687ced
         path: 
-    - packageId: com.unity.textmeshpro@3.0.4
+    - packageId: com.unity.textmeshpro@2.1.1
       testable: 0
       isDirectDependency: 1
-      version: 3.0.4
+      version: 2.1.1
       source: 1
-      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.textmeshpro@3.0.4
+      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.textmeshpro@2.1.1
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
       displayName: TextMeshPro
@@ -611,20 +525,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637492944820000000
+      datePublishedTicks: 637314375980000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
-        revision: e2f8dffb26de9a130d5b2140d83891d9a7825330
+        revision: 43745ffec1bfe433cd3e02e88eb1f393097dffb9
         path: 
-    - packageId: com.unity.timeline@1.4.7
+    - packageId: com.unity.timeline@1.2.17
       testable: 0
       isDirectDependency: 1
-      version: 1.4.7
+      version: 1.2.17
       source: 1
-      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.timeline@1.4.7
+      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.timeline@1.2.17
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
       displayName: Timeline
@@ -720,24 +634,8 @@ m_PackageAssets:
         - 1.6.0-pre.3
         - 1.6.0-pre.4
         verified: 1.4.8
-      dependencies:
-      - name: com.unity.modules.director
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.modules.audio
-        version: 1.0.0
-      - name: com.unity.modules.particlesystem
-        version: 1.0.0
-      resolvedDependencies:
-      - name: com.unity.modules.director
-        version: 1.0.0
-      - name: com.unity.modules.audio
-        version: 1.0.0
-      - name: com.unity.modules.animation
-        version: 1.0.0
-      - name: com.unity.modules.particlesystem
-        version: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
       keywords:
       - unity
       - animation
@@ -756,13 +654,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637516874380000000
+      datePublishedTicks: 637359677410000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-        revision: 66f96ddbbc76f565093e1e5e5d3d322d28acc7d7
+        revision: 61fddfa7b542abc7f76e04771589393fbd5a55b8
         path: 
     - packageId: com.unity.ugui@1.0.0
       testable: 0
@@ -2569,12 +2467,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.ext.nunit@1.0.6
+    - packageId: com.unity.ext.nunit@1.0.0
       testable: 0
       isDirectDependency: 0
-      version: 1.0.6
+      version: 1.0.0
       source: 1
-      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.6
+      resolvedPath: /Users/yesup/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
       displayName: Custom NUnit
@@ -2622,13 +2520,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637429759280000000
+      datePublishedTicks: 636898893830000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
-        revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
+        url: git@gitlab.cds.internal.unity3d.com/upm-packages/core/com.unity.ext.nunit.git
+        revision: c8f5044ffe6adb909f9836160b0bdaa30f2d1ec9
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []

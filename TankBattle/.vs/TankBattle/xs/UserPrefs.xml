@@ -3,19 +3,13 @@
     <Files>
       <File FileName="Assets/Scripts/MenuManagerScript.cs" Line="22" Column="34" />
       <File FileName="Assets/Scripts/CarMovementScript.cs" Line="54" Column="23" />
-      <File FileName="Assets/Scripts/NetworkManagerScript.cs" Line="11" Column="17" />
+      <File FileName="Assets/Scripts/NetworkManagerScript.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TankBattle" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Assets" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="CarMovementScript.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
+            <Node name="Assets" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -23,7 +17,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1c89cd00-d85c-4c71-8fb1-4a6cc220d884" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="74556936-9ab0-48cd-8b84-cff98da532ce" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
