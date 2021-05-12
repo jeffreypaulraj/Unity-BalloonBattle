@@ -13,6 +13,9 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     public GameObject carOne;
     public GameObject carTwo;
     int playerIndex;
+    public Camera mainCamera;
+    public Camera cameraOne;
+    public Camera cameraTwo;
 
     public static CarMovementScript instance;
 
@@ -40,6 +43,14 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
                 playerIndex = count;
             }
             count++;
+        }
+        mainCamera.enabled = false;
+        if(playerIndex == 0) {
+            cameraTwo.enabled = false;
+        }
+        else
+        {
+            cameraOne.enabled = false;
         }
     }
 
@@ -75,6 +86,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         }
         else if (Input.GetKey(KeyCode.RightArrow)){
             cars[playerIndex].transform.Translate(Vector3.right);
+            cars[playerIndex].transform.Rotate(new Vector3(0,0,1));
         }
         else if (Input.GetKey(KeyCode.UpArrow)){
             cars[playerIndex].transform.Translate(Vector3.forward);

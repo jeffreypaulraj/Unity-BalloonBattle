@@ -2,24 +2,17 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CarMovementScript.cs">
     <Files>
       <File FileName="Assets/Scripts/MenuManagerScript.cs" Line="22" Column="34" />
-      <File FileName="Assets/Scripts/CarMovementScript.cs" Line="42" Column="21" />
+      <File FileName="Assets/Scripts/CarMovementScript.cs" Line="7" Column="24" />
       <File FileName="Assets/Scripts/NetworkManagerScript.cs" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="TankBattle" expanded="True">
-            <Node name="Assets" expanded="True" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="74556936-9ab0-48cd-8b84-cff98da532ce" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7a2a6003-1d6e-49ad-9c79-f39062eabdaf" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Assets/Scripts/CarMovementScript.cs" relfile="Assets/Scripts/CarMovementScript.cs" line="22" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
