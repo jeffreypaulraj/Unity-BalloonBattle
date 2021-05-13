@@ -423,3 +423,25 @@ System memory in use after: 118.7 MB.
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1629.
 Total: 1.845451 ms (FindLiveObjects: 0.175938 ms CreateObjectMapping: 0.049969 ms MarkObjects: 1.604485 ms  DeleteObjects: 0.013920 ms)
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003276 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.047 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.8 MB.
+System memory in use after: 118.9 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1631.
+Total: 1.659669 ms (FindLiveObjects: 0.176491 ms CreateObjectMapping: 0.047576 ms MarkObjects: 1.419784 ms  DeleteObjects: 0.014648 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
