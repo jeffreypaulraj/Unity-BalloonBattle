@@ -16,6 +16,10 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     public Camera mainCamera;
     public Camera cameraOne;
     public Camera cameraTwo;
+    public GameObject missileOne;
+    public GameObject missileTwo;
+    GameObject mainMissile;
+    float shootTimer;
 
     public static CarMovementScript instance;
 
@@ -37,6 +41,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         cars[0] = carOne;
         cars[1] = carTwo;
 
+        shootTimer = 0;
         int count = 0;
         foreach(Player player in PhotonNetwork.PlayerList){
             if (player.Equals(PhotonNetwork.LocalPlayer)) {
@@ -47,10 +52,11 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         mainCamera.enabled = false;
         if(playerIndex == 0) {
             cameraTwo.enabled = false;
+            mainMissile = missileOne;
         }
-        else
-        {
+        else{
             cameraOne.enabled = false;
+            mainMissile = missileTwo;
         }
     }
 
@@ -73,16 +79,13 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
 
     }
     private void FixedUpdate(){
+        shootTimer += Time.deltaTime;
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         breaking = Input.GetKey(KeyCode.Space);
-        //applyMovement(cars[playerIndex]);
 
         if (Input.GetKey(KeyCode.LeftArrow)){
             cars[playerIndex].transform.Translate(Vector3.left);
-            //if(cars[playerIndex].transform.rotation.eulerAngles.x > -90){
-            //    cars[playerIndex].transform.Rotate(new Vector3(0, -1, 0));
-            //}
         }
         else if (Input.GetKey(KeyCode.RightArrow)){
             cars[playerIndex].transform.Translate(Vector3.right);
@@ -94,11 +97,23 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         else if (Input.GetKey(KeyCode.DownArrow)){
             cars[playerIndex].transform.Translate(Vector3.back);
         }
-        Rigidbody rb = this.gameObject.transform.GetComponent<Rigidbody>();
+        else if (Input.GetKey(KeyCode.Space)){
+            shootProjectile();
+        }
+        Rigidbody rb = cars[playerIndex].transform.GetComponent<Rigidbody>();
 
     }
     void applyMovement(GameObject car)
     {
-
+        
+       
+    }
+    void shootProjectile(){
+        Debug.Log("Called 1");
+        if(shootTimer > 0.3){
+            Debug.Log("Called 2");
+            Instantiate(mainMissile, cars[playerIndex].transform.position, cars[playerIndex].transform.rotation);
+            shootTimer = 0;
+        }
     }
 }

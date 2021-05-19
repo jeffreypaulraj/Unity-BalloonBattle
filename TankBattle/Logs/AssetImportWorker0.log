@@ -12,436 +12,652 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63389
+61602
 Successfully changed project path to: /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle
 /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 28.41 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 37.43 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.7f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Assets
 GfxDevice: creating device client; threaded=0
-2021-05-12 10:25:26.683 Unity[10840:322654] Color LCD preferred device: AMD Radeon Pro 5300M (high power)
-2021-05-12 10:25:26.683 Unity[10840:322654] Metal devices available: 2
-2021-05-12 10:25:26.683 Unity[10840:322654] 0: AMD Radeon Pro 5300M (high power)
-2021-05-12 10:25:26.683 Unity[10840:322654] 1: Intel(R) UHD Graphics 630 (low power)
-2021-05-12 10:25:26.683 Unity[10840:322654] Using device AMD Radeon Pro 5300M (high power)
+2021-05-19 10:36:43.019 Unity[9402:458447] Color LCD preferred device: Intel(R) UHD Graphics 630 (low power)
+2021-05-19 10:36:43.019 Unity[9402:458447] Metal devices available: 2
+2021-05-19 10:36:43.019 Unity[9402:458447] 0: AMD Radeon Pro 5300M (high power)
+2021-05-19 10:36:43.019 Unity[9402:458447] 1: Intel(R) UHD Graphics 630 (low power)
+2021-05-19 10:36:43.020 Unity[9402:458447] Using device AMD Radeon Pro 5300M (high power)
 Initializing Metal device caps: AMD Radeon Pro 5300M
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.7f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.7f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.7f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56840
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56402
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.7f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000511 seconds.
+Registered in 0.000568 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 28.57 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 35.75 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.377 seconds
+- Completed reload, in  1.749 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001046 seconds.
+Registered in 0.002914 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.003 seconds
+- Completed reload, in  0.952 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.7f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
-Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1157 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.6 MB.
-System memory in use after: 117.7 MB.
+System memory in use before: 118.5 MB.
+System memory in use after: 118.6 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1601.
-Total: 2.570318 ms (FindLiveObjects: 0.239367 ms CreateObjectMapping: 0.047135 ms MarkObjects: 2.195986 ms  DeleteObjects: 0.085788 ms)
+Total: 1.999347 ms (FindLiveObjects: 0.177987 ms CreateObjectMapping: 0.054912 ms MarkObjects: 1.673750 ms  DeleteObjects: 0.091478 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Menu.unity
-  artifactKey: Guid(edbe5e68b67524558bd593c21e6616c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Menu.unity using Guid(edbe5e68b67524558bd593c21e6616c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1741ebacbd11490efa7be3209c15e35') in 0.009175 seconds
-  Import took 0.011204 seconds .
+  path: Assets/World Portal System Package/Prefabs
+  artifactKey: Guid(e2c24e3cb6c244b90be24a6bef003f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/World Portal System Package/Prefabs using Guid(e2c24e3cb6c244b90be24a6bef003f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac3becd0615dbfb2081d8079afa13ac0') in 0.003927 seconds
+  Import took 0.006446 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.053508 seconds.
-  path: Assets/Scenes/Menu.unity
-  artifactKey: Guid(edbe5e68b67524558bd593c21e6616c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Menu.unity using Guid(edbe5e68b67524558bd593c21e6616c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1741ebacbd11490efa7be3209c15e35') in 0.001090 seconds
-  Import took 0.002834 seconds .
+  Time since last request: 0.000219 seconds.
+  path: Assets/World Portal System Package/Prefabs/Portal Pair.prefab
+  artifactKey: Guid(f6fa6c7286c8645d4b4fb75222f50a5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/World Portal System Package/Prefabs/Portal Pair.prefab using Guid(f6fa6c7286c8645d4b4fb75222f50a5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bb96418e37960686dee71e3a705546e') in 1.636881 seconds
+  Import took 1.638897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/World Portal System Package/Prefabs/Portal.prefab
+  artifactKey: Guid(2bb4d5732a9e345a9bbed0782fdbe189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/World Portal System Package/Prefabs/Portal.prefab using Guid(2bb4d5732a9e345a9bbed0782fdbe189) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9b130afb547a3e9048c71f482ccaf4') in 0.022579 seconds
+  Import took 0.024949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000290 seconds.
+  path: Assets/World Portal System Package/Prefabs/PortalableFPSController.prefab
+  artifactKey: Guid(d9b86810d190e46c38b0f90ac9219aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/World Portal System Package/Prefabs/PortalableFPSController.prefab using Guid(d9b86810d190e46c38b0f90ac9219aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eba3a2748efe8a6a88f5aa254cc8b257') in 0.009552 seconds
+  Import took 0.012188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs
+  artifactKey: Guid(4c1d12f53deb94c7dada3a451b40ad73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs using Guid(4c1d12f53deb94c7dada3a451b40ad73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ea31cfe55569016cad5d0cce8bdcf8') in 0.000988 seconds
+  Import took 0.003197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015635 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs
+  artifactKey: Guid(4c1d12f53deb94c7dada3a451b40ad73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs using Guid(4c1d12f53deb94c7dada3a451b40ad73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ea31cfe55569016cad5d0cce8bdcf8') in 0.000940 seconds
+  Import took 0.003357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.114030 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs
+  artifactKey: Guid(dac552d33239a9145afb6dbc5232730f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs using Guid(dac552d33239a9145afb6dbc5232730f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1593569c8a222961a56004d19157f695') in 0.001088 seconds
+  Import took 0.003617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000648 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs
+  artifactKey: Guid(dac552d33239a9145afb6dbc5232730f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs using Guid(dac552d33239a9145afb6dbc5232730f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1593569c8a222961a56004d19157f695') in 0.001056 seconds
+  Import took 0.004059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.149358 seconds.
+  path: Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue
+  artifactKey: Guid(0772e221095b0d94e841ae764341ecd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Rockets Missiles and Bombs/Prefabs/Blue using Guid(0772e221095b0d94e841ae764341ecd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98b65010b38921ac79c56a0385e4aefe') in 0.001174 seconds
+  Import took 0.004548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.666295 seconds.
+  path: Assets/Missiles
+  artifactKey: Guid(5957723085c8241faac92b60b6edf1a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles using Guid(5957723085c8241faac92b60b6edf1a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dce5ca8d0e18b3476615e1b60e5bef47') in 0.002028 seconds
+  Import took 0.005156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.873914 seconds.
+  path: Assets/Imports
+  artifactKey: Guid(38e1f5809abe34ecfa615d3b19d67ec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports using Guid(38e1f5809abe34ecfa615d3b19d67ec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c5d3a630d9979e435a862a50b816b9d') in 0.001728 seconds
+  Import took 0.004896 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001131 seconds.
+Registered in 0.002425 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.068 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 125.0 MB.
+System memory in use after: 125.1 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1611.
+Total: 1.411417 ms (FindLiveObjects: 0.171928 ms CreateObjectMapping: 0.049656 ms MarkObjects: 1.176586 ms  DeleteObjects: 0.012014 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.804776 seconds.
+  path: Assets/Asset
+  artifactKey: Guid(79b823296a9854599a78b76c3812dbff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset using Guid(79b823296a9854599a78b76c3812dbff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc888e326339106942a7bbea94bd9d8') in 0.003449 seconds
+  Import took 0.006108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014704 seconds.
+  path: Assets/Asset
+  artifactKey: Guid(79b823296a9854599a78b76c3812dbff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset using Guid(79b823296a9854599a78b76c3812dbff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc888e326339106942a7bbea94bd9d8') in 0.001006 seconds
+  Import took 0.004088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.625920 seconds.
+  path: Assets/Imports/AurynSky
+  artifactKey: Guid(89ef738511a1c4641b7ef32dd9e2371f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/AurynSky using Guid(89ef738511a1c4641b7ef32dd9e2371f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba58c87d0ec4dd9216a4677fe307a0f9') in 0.001038 seconds
+  Import took 0.003345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.224677 seconds.
+  path: Assets/Imports/AurynSky/Rockets Missiles and Bombs/Prefabs/Red
+  artifactKey: Guid(a418fd35103767d4ab9709be3630bf2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imports/AurynSky/Rockets Missiles and Bombs/Prefabs/Red using Guid(a418fd35103767d4ab9709be3630bf2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '547fa519a770666e1cafdd8fe91fa34c') in 0.001271 seconds
+  Import took 0.005057 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.322228 seconds.
+  path: Assets/Missiles/BlueRocket.prefab
+  artifactKey: Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/BlueRocket.prefab using Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b8c8fe8620082c9397744e153afd1ab') in 0.072670 seconds
+  Import took 0.074869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.495735 seconds.
+  path: Assets/Missiles/RedRocket.prefab
+  artifactKey: Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/RedRocket.prefab using Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b9bb17cbcba04984cc43f041c383180') in 0.026979 seconds
+  Import took 0.029488 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004103 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.118 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 125.3 MB.
+System memory in use after: 125.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1614.
+Total: 1.333219 ms (FindLiveObjects: 0.137144 ms CreateObjectMapping: 0.033975 ms MarkObjects: 1.148988 ms  DeleteObjects: 0.012258 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002348 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.957 seconds
+- Completed reload, in  0.924 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.3 MB.
-System memory in use after: 116.4 MB.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 125.6 MB.
+System memory in use after: 125.7 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1603.
-Total: 1.486177 ms (FindLiveObjects: 0.175865 ms CreateObjectMapping: 0.038054 ms MarkObjects: 1.258661 ms  DeleteObjects: 0.012708 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1617.
+Total: 1.586109 ms (FindLiveObjects: 0.187137 ms CreateObjectMapping: 0.051544 ms MarkObjects: 1.326633 ms  DeleteObjects: 0.019804 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 54.010730 seconds.
-  path: Assets/Scenes/Game.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '116b7e7ac4e43bf041cbc25d845ca316') in 0.011100 seconds
-  Import took 0.013257 seconds .
+  Time since last request: 82.185482 seconds.
+  path: Assets/Missiles/BlueRocket.prefab
+  artifactKey: Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/BlueRocket.prefab using Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3ecdf9c5a8bfaf8e29e3e96eafffa77') in 0.070153 seconds
+  Import took 0.072968 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001002 seconds.
+Registered in 0.001067 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.996 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 125.9 MB.
+System memory in use after: 126.0 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1620.
+Total: 1.580483 ms (FindLiveObjects: 0.166559 ms CreateObjectMapping: 0.042032 ms MarkObjects: 1.356719 ms  DeleteObjects: 0.014176 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.462647 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(e760de5bbaa46423fb2833400783b289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(e760de5bbaa46423fb2833400783b289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b35c708401882e56793384102b8437ee') in 0.003462 seconds
+  Import took 0.006163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.352641 seconds.
+  path: Assets/Missiles/BlueRocket.prefab
+  artifactKey: Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/BlueRocket.prefab using Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2b523478251b6e44e57278931838092') in 0.067944 seconds
+  Import took 0.070111 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.373498 seconds.
+  path: Assets/Missiles/BlueRocket.prefab
+  artifactKey: Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/BlueRocket.prefab using Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ca3edcbb0d5f63eec6605868d670e05') in 0.026426 seconds
+  Import took 0.028754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.149045 seconds.
+  path: Assets/Missiles/RedRocket.prefab
+  artifactKey: Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/RedRocket.prefab using Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eced52d8a91a6e4d9da40563b8daca0') in 0.022875 seconds
+  Import took 0.025738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.884486 seconds.
+  path: Assets/Scripts/MoveMissile.cs
+  artifactKey: Guid(a5a9f6dc9110f4269b86e072b9acf2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MoveMissile.cs using Guid(a5a9f6dc9110f4269b86e072b9acf2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc66f2cdaa3a6e8695bda373279941d4') in 0.377484 seconds
+  Import took 0.380387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.055993 seconds.
+  path: Assets/Scripts/MoveMissile.cs
+  artifactKey: Guid(a5a9f6dc9110f4269b86e072b9acf2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MoveMissile.cs using Guid(a5a9f6dc9110f4269b86e072b9acf2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb22112df3c16b466a7e6067ddbf477b') in 0.005747 seconds
+  Import took 0.009077 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001099 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.011 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.4 MB.
+System memory in use after: 130.5 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1623.
+Total: 2.233946 ms (FindLiveObjects: 0.350941 ms CreateObjectMapping: 0.054568 ms MarkObjects: 1.805212 ms  DeleteObjects: 0.021293 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.733265 seconds.
+  path: Assets/Scripts/MoveMissile.cs
+  artifactKey: Guid(a5a9f6dc9110f4269b86e072b9acf2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MoveMissile.cs using Guid(a5a9f6dc9110f4269b86e072b9acf2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '453165555966c761abd384e62b61f862') in 0.009050 seconds
+  Import took 0.011570 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001497 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.975 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.5 MB.
-System memory in use after: 116.6 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1605.
-Total: 1.621186 ms (FindLiveObjects: 0.158075 ms CreateObjectMapping: 0.038571 ms MarkObjects: 1.407649 ms  DeleteObjects: 0.015981 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001335 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.984 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.7 MB.
-System memory in use after: 116.8 MB.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.7 MB.
+System memory in use after: 130.8 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1607.
-Total: 1.633684 ms (FindLiveObjects: 0.181453 ms CreateObjectMapping: 0.040755 ms MarkObjects: 1.395690 ms  DeleteObjects: 0.014759 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001023 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.960 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.8 MB.
-System memory in use after: 116.9 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1609.
-Total: 1.732201 ms (FindLiveObjects: 0.222448 ms CreateObjectMapping: 0.061889 ms MarkObjects: 1.433491 ms  DeleteObjects: 0.013507 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001106 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.975 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.0 MB.
-System memory in use after: 117.1 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1611.
-Total: 1.714419 ms (FindLiveObjects: 0.148706 ms CreateObjectMapping: 0.036897 ms MarkObjects: 1.513057 ms  DeleteObjects: 0.014660 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001018 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.927 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.2 MB.
-System memory in use after: 117.3 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1613.
-Total: 1.516785 ms (FindLiveObjects: 0.149934 ms CreateObjectMapping: 0.038438 ms MarkObjects: 1.314036 ms  DeleteObjects: 0.013445 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001089 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.965 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.4 MB.
-System memory in use after: 117.5 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1615.
-Total: 1.743784 ms (FindLiveObjects: 0.206758 ms CreateObjectMapping: 0.053205 ms MarkObjects: 1.464779 ms  DeleteObjects: 0.017274 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1625.
+Total: 1.712422 ms (FindLiveObjects: 0.167922 ms CreateObjectMapping: 0.041788 ms MarkObjects: 1.484595 ms  DeleteObjects: 0.016290 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 532.964067 seconds.
-  path: Assets/Scenes/Game.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34cbe8a05844599f81ebbbee83338373') in 0.009471 seconds
-  Import took 0.011789 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007670 seconds.
-  path: Assets/Scenes/Game.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34cbe8a05844599f81ebbbee83338373') in 0.001059 seconds
-  Import took 0.003027 seconds .
+  Time since last request: 33.245408 seconds.
+  path: Assets/Scripts/MoveMissile.cs
+  artifactKey: Guid(a5a9f6dc9110f4269b86e072b9acf2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MoveMissile.cs using Guid(a5a9f6dc9110f4269b86e072b9acf2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27a0a674d01b3e2a89605405c7c33e30') in 0.006506 seconds
+  Import took 0.009204 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001044 seconds.
+Registered in 0.001078 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.883 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.9 MB.
+System memory in use after: 131.0 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1627.
+Total: 1.599271 ms (FindLiveObjects: 0.229929 ms CreateObjectMapping: 0.051472 ms MarkObjects: 1.302948 ms  DeleteObjects: 0.013673 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 74.834494 seconds.
+  path: Assets/Scripts/CarMovementScript.cs
+  artifactKey: Guid(6c33037b574ea499e937c84a1ebcdbe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CarMovementScript.cs using Guid(6c33037b574ea499e937c84a1ebcdbe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e7dfea32d88a86b5404dc09547204fd') in 0.006430 seconds
+  Import took 0.008701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.035096 seconds.
+  path: Assets/Scripts/CarMovementScript.cs
+  artifactKey: Guid(6c33037b574ea499e937c84a1ebcdbe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CarMovementScript.cs using Guid(6c33037b574ea499e937c84a1ebcdbe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e7dfea32d88a86b5404dc09547204fd') in 0.003862 seconds
+  Import took 0.006672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.535863 seconds.
+  path: Assets/Missiles/BlueRocket.prefab
+  artifactKey: Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/BlueRocket.prefab using Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91b7d19b0bd6e05f59a47d6aa19dcdda') in 0.068664 seconds
+  Import took 0.070978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.111587 seconds.
+  path: Assets/Missiles/RedRocket.prefab
+  artifactKey: Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/RedRocket.prefab using Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c60643cb106df90aa3aefef433d0f451') in 0.027344 seconds
+  Import took 0.029909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.158585 seconds.
+  path: Assets/Missiles/RedRocket.prefab
+  artifactKey: Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/RedRocket.prefab using Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25471e6f596e4a89bf4c7b9ad4c266ab') in 0.027011 seconds
+  Import took 0.030570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006653 seconds.
+  path: Assets/Missiles/RedRocket.prefab
+  artifactKey: Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/RedRocket.prefab using Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25471e6f596e4a89bf4c7b9ad4c266ab') in 0.012668 seconds
+  Import took 0.015437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.463453 seconds.
+  path: Assets/Missiles/RedRocket.prefab
+  artifactKey: Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/RedRocket.prefab using Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2ce35fa01283e829c81110abd45995') in 0.027178 seconds
+  Import took 0.029740 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002238 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.996 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.3 MB.
+System memory in use after: 131.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1630.
+Total: 1.799585 ms (FindLiveObjects: 0.157590 ms CreateObjectMapping: 0.042636 ms MarkObjects: 1.577364 ms  DeleteObjects: 0.020805 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 136.841031 seconds.
+  path: Assets/Missiles/RedRocket.prefab
+  artifactKey: Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/RedRocket.prefab using Guid(930cc3f14bc84554f8048c12ee59326e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31b459bccd6b0b49572b8e1a8776835') in 0.073021 seconds
+  Import took 0.075424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Missiles/BlueRocket.prefab
+  artifactKey: Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Missiles/BlueRocket.prefab using Guid(517acb0350d861042ae93de85999a727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0762eb16478bf42e759c6d893b00579a') in 0.016530 seconds
+  Import took 0.018928 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002086 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.6 MB.
+System memory in use after: 131.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1633.
+Total: 1.789321 ms (FindLiveObjects: 0.152597 ms CreateObjectMapping: 0.038162 ms MarkObjects: 1.579136 ms  DeleteObjects: 0.017847 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001561 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.079 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 131.8 MB.
+System memory in use after: 131.9 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1635.
+Total: 1.692705 ms (FindLiveObjects: 0.157845 ms CreateObjectMapping: 0.055193 ms MarkObjects: 1.455639 ms  DeleteObjects: 0.021908 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002286 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.089 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 132.0 MB.
+System memory in use after: 132.1 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1637.
+Total: 1.441681 ms (FindLiveObjects: 0.143650 ms CreateObjectMapping: 0.033211 ms MarkObjects: 1.248664 ms  DeleteObjects: 0.014044 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002054 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.052 seconds
+- Completed reload, in  0.922 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.5 MB.
-System memory in use after: 117.6 MB.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 132.4 MB.
+System memory in use after: 132.5 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1617.
-Total: 2.020505 ms (FindLiveObjects: 0.175366 ms CreateObjectMapping: 0.047174 ms MarkObjects: 1.778522 ms  DeleteObjects: 0.017121 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 137.717954 seconds.
-  path: Assets/Scenes/Game.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '250ec05dee31621843d37f23178c0693') in 0.011739 seconds
-  Import took 0.014689 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/Scenes/Game.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '250ec05dee31621843d37f23178c0693') in 0.001081 seconds
-  Import took 0.003237 seconds .
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1639.
+Total: 1.574806 ms (FindLiveObjects: 0.237433 ms CreateObjectMapping: 0.050820 ms MarkObjects: 1.272313 ms  DeleteObjects: 0.013307 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001224 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.956 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.7 MB.
-System memory in use after: 117.8 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1619.
-Total: 1.846470 ms (FindLiveObjects: 0.287790 ms CreateObjectMapping: 0.066790 ms MarkObjects: 1.461882 ms  DeleteObjects: 0.015621 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 180.449231 seconds.
-  path: Assets/Scenes/Game.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '628dad578e4f792a0ae334691db5cbbd') in 0.011640 seconds
-  Import took 0.013844 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000972 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.024 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.9 MB.
-System memory in use after: 118.0 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1621.
-Total: 1.557414 ms (FindLiveObjects: 0.180025 ms CreateObjectMapping: 0.057376 ms MarkObjects: 1.305891 ms  DeleteObjects: 0.012797 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001011 seconds.
+Registered in 0.001215 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.954 seconds
+- Completed reload, in  1.083 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.1 MB.
-System memory in use after: 118.2 MB.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 132.6 MB.
+System memory in use after: 132.7 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1623.
-Total: 1.914393 ms (FindLiveObjects: 0.197076 ms CreateObjectMapping: 0.050752 ms MarkObjects: 1.646729 ms  DeleteObjects: 0.018514 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1641.
+Total: 1.562579 ms (FindLiveObjects: 0.195866 ms CreateObjectMapping: 0.045946 ms MarkObjects: 1.301344 ms  DeleteObjects: 0.017935 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003482 seconds.
+Registered in 0.001059 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.004 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.3 MB.
-System memory in use after: 118.4 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1625.
-Total: 1.824953 ms (FindLiveObjects: 0.160050 ms CreateObjectMapping: 0.047570 ms MarkObjects: 1.602769 ms  DeleteObjects: 0.013420 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002068 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.932 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.4 MB.
-System memory in use after: 118.5 MB.
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1627.
-Total: 1.397750 ms (FindLiveObjects: 0.185390 ms CreateObjectMapping: 0.059579 ms MarkObjects: 1.140614 ms  DeleteObjects: 0.011179 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003723 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.077 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.6 MB.
-System memory in use after: 118.7 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.003 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 132.8 MB.
+System memory in use after: 132.9 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1629.
-Total: 1.845451 ms (FindLiveObjects: 0.175938 ms CreateObjectMapping: 0.049969 ms MarkObjects: 1.604485 ms  DeleteObjects: 0.013920 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1643.
+Total: 1.588865 ms (FindLiveObjects: 0.170410 ms CreateObjectMapping: 0.040420 ms MarkObjects: 1.363521 ms  DeleteObjects: 0.013320 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003276 seconds.
+Registered in 0.001421 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image /Users/jeffrey/Documents/GitHub/Unity-BalloonBattle/TankBattle/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.047 seconds
+- Completed reload, in  1.031 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 118.8 MB.
-System memory in use after: 118.9 MB.
+Unloading 1138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 133.0 MB.
+System memory in use after: 133.1 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1631.
-Total: 1.659669 ms (FindLiveObjects: 0.176491 ms CreateObjectMapping: 0.047576 ms MarkObjects: 1.419784 ms  DeleteObjects: 0.014648 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1645.
+Total: 1.731624 ms (FindLiveObjects: 0.167711 ms CreateObjectMapping: 0.039932 ms MarkObjects: 1.504544 ms  DeleteObjects: 0.018443 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
