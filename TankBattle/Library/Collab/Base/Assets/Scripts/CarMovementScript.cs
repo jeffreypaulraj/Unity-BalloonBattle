@@ -17,6 +17,9 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     public Camera mainCamera;
     public Camera cameraOne;
     public Camera cameraTwo;
+    public GameObject missileOne;
+    public GameObject missileTwo;
+    GameObject mainMissile;
 
     WheelCollider frontLeftCollider;
     WheelCollider frontRightCollider;
@@ -29,6 +32,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     Transform rearRightWheel;
 
     public float motorForce;
+    float shootTimer;
     public float maxSteeringAngle;
     float steeringAngle;
 
@@ -52,6 +56,14 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         cars[0] = carOne;
         cars[1] = carTwo;
 
+        shootTimer = 0;
+
+        Rigidbody rb1 = carOne.GetComponent<Rigidbody>();
+        Rigidbody rb2 = carTwo.GetComponent<Rigidbody>();
+        rb1.centerOfMass = new Vector3(rb1.centerOfMass.x, rb1.centerOfMass.y - 0.4f, rb1.centerOfMass.z);
+        rb2.centerOfMass = new Vector3(rb2.centerOfMass.x, rb2.centerOfMass.y - 0.4f, rb2.centerOfMass.z);
+
+
         int count = 0;
         foreach(Player player in PhotonNetwork.PlayerList){
             if (player.Equals(PhotonNetwork.LocalPlayer)) {
@@ -59,7 +71,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             }
             count++;
         }
-        mainCamera.enabled = false;
+        //mainCamera.enabled = false;
         if(playerIndex == 0) {
             cameraTwo.enabled = false;
         }
@@ -76,9 +88,11 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         propertyHash.Add("Rotation", cars[playerIndex].transform.rotation);
         PhotonNetwork.LocalPlayer.SetCustomProperties(propertyHash);
 
+        shootTimer += Time.deltaTime;
+
         int count = 0;
-        foreach(Player player in PhotonNetwork.PlayerList){
-            if (!player.Equals(PhotonNetwork.LocalPlayer)){
+        foreach(Player player in PhotonNetwork.PlayerList) {
+            if (!player.Equals(PhotonNetwork.LocalPlayer)) {
                 cars[count].transform.position = (Vector3)player.CustomProperties["Position"];
                 cars[count].transform.rotation = (Quaternion)player.CustomProperties["Rotation"];
             }
@@ -92,6 +106,11 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         verticalInput = Input.GetAxis("Vertical");
         breaking = Input.GetKey(KeyCode.Space);
         applyMovement(cars[playerIndex]);
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            shootProjectile();
+        }
         
         //if (Input.GetKey(KeyCode.LeftArrow)){
         //    cars[playerIndex].transform.Translate(Vector3.left);
@@ -165,5 +184,14 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
+    }
+    void shootProjectile()
+    {
+        Debug.Log("Called 1");
+        if (shootTimer > 0.3){
+            Debug.Log("Called 2");
+            Instantiate(mainMissile, cars[playerIndex].transform.position, cars[playerIndex].transform.rotation);
+            shootTimer = 0;
+        }
     }
 }

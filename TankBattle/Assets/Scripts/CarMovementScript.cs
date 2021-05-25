@@ -63,7 +63,6 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         rb1.centerOfMass = new Vector3(rb1.centerOfMass.x, rb1.centerOfMass.y - 0.4f, rb1.centerOfMass.z);
         rb2.centerOfMass = new Vector3(rb2.centerOfMass.x, rb2.centerOfMass.y - 0.4f, rb2.centerOfMass.z);
 
-
         int count = 0;
         foreach(Player player in PhotonNetwork.PlayerList){
             if (player.Equals(PhotonNetwork.LocalPlayer)) {
@@ -74,10 +73,11 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         //mainCamera.enabled = false;
         if(playerIndex == 0) {
             cameraTwo.enabled = false;
+            mainMissile = missileOne;
         }
-        else
-        {
+        else{
             cameraOne.enabled = false;
+            mainMissile = missileTwo;
         }
     }
 
@@ -190,7 +190,9 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         Debug.Log("Called 1");
         if (shootTimer > 0.3){
             Debug.Log("Called 2");
-            Instantiate(mainMissile, cars[playerIndex].transform.position, cars[playerIndex].transform.rotation);
+            Vector3 newPosition = new Vector3(cars[playerIndex].transform.position.x + 3, cars[playerIndex].transform.position.y, cars[playerIndex].transform.position.z);
+            Vector3 newRotation = new Vector3(cars[playerIndex].transform.rotation.eulerAngles.x + 90, cars[playerIndex].transform.rotation.eulerAngles.y + 90, cars[playerIndex].transform.rotation.eulerAngles.z + 90);
+            Instantiate(mainMissile, newPosition, Quaternion.Euler(newRotation));
             shootTimer = 0;
         }
     }
