@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{FA470E05-34A9-DF96-F3A0-23198318BFE5}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CarMovementScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/CarMovementScript.cs" Line="196" Column="28" />
-      <File FileName="Assets/Scripts/MenuManagerScript.cs" />
-      <File FileName="Assets/Scripts/NetworkManagerScript.cs" />
-      <File FileName="Assets/Scripts/MoveMissile.cs" Line="15" Column="42" />
+      <File FileName="Assets/Scripts/CarMovementScript.cs" Line="230" Column="93" />
+      <File FileName="Assets/Scripts/MenuManagerScript.cs" Line="82" Column="50" />
+      <File FileName="Assets/Scripts/NetworkManagerScript.cs" Line="7" Column="48" />
+      <File FileName="Assets/Scripts/MoveMissile.cs" Line="23" Column="36" />
+      <File FileName="Assets/Scripts/MysteryBoxCollisionManager.cs" Line="22" Column="6" />
+      <File FileName="Assets/Scripts/SpawnMysteryBoxes.cs" Line="23" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3f4dc858-ba15-4de5-a214-879ecef7e1e0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4b9c694a-6a5a-400c-8326-5d6b4d6eb7f9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

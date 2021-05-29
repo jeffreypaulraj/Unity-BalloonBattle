@@ -4,13 +4,14 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
+using UnityEngine.UI;
 
 public class CarMovementScript : MonoBehaviourPunCallbacks
 {
     float horizontalInput;
     float verticalInput;
-    bool breaking;
     GameObject[] cars;
+    GameObject[] missileArray;
     public GameObject carOne;
     public GameObject carTwo;
     int playerIndex;
@@ -19,7 +20,10 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     public Camera cameraTwo;
     public GameObject missileOne;
     public GameObject missileTwo;
+    public Text healthDisplay;
     GameObject mainMissile;
+
+    public int health = 3;
 
     WheelCollider frontLeftCollider;
     WheelCollider frontRightCollider;
@@ -32,8 +36,10 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     Transform rearRightWheel;
 
     public float motorForce;
+    public float brakeForce;
     float shootTimer;
     public float maxSteeringAngle;
+
     float steeringAngle;
 
     public static CarMovementScript instance;
@@ -81,6 +87,8 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             cameraOne.enabled = false;
             mainMissile = missileTwo;
         }
+        health = 3;
+        healthDisplay.text = "Total Lives: " + health;
     }
 
     void Update(){
@@ -88,8 +96,27 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         ExitGames.Client.Photon.Hashtable propertyHash = new ExitGames.Client.Photon.Hashtable();
         propertyHash.Add("Position", cars[playerIndex].transform.position);
         propertyHash.Add("Rotation", cars[playerIndex].transform.rotation);
+
+        GameObject[] otherMissiles;
+
+        if (playerIndex == 0){
+            missileArray = GameObject.FindGameObjectsWithTag("BlueMissile");
+            otherMissiles = GameObject.FindGameObjectsWithTag("RedMissile");
+        }
+        else{
+            missileArray = GameObject.FindGameObjectsWithTag("RedMissile");
+            otherMissiles = GameObject.FindGameObjectsWithTag("BlueMissile");
+        }
+
+        propertyHash.Add("Missiles", missileArray);
+
+        for(int i = otherMissiles.Length - 1; i >= 0; i--){
+           GameObject.Destroy(otherMissiles[i].gameObject);
+        }
+        
         PhotonNetwork.LocalPlayer.SetCustomProperties(propertyHash);
 
+        //Add missiles to the propertyHash
         shootTimer += Time.deltaTime;
 
         int count = 0;
@@ -97,40 +124,31 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             if (!player.Equals(PhotonNetwork.LocalPlayer)) {
                 cars[count].transform.position = (Vector3)player.CustomProperties["Position"];
                 cars[count].transform.rotation = (Quaternion)player.CustomProperties["Rotation"];
+
+                GameObject[] missiles = (GameObject[])player.CustomProperties["Missiles"];
+                for(int i = 0; i < missiles.Length; i++){
+                    GameObject.Instantiate(missiles[i]);
+                }
             }
             count++;
-
         }
 
     }
+
     private void FixedUpdate(){
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        breaking = Input.GetKey(KeyCode.Space);
         applyMovement(cars[playerIndex]);
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
             shootProjectile();
         }
-        
-        //if (Input.GetKey(KeyCode.LeftArrow)){
-        //    cars[playerIndex].transform.Translate(Vector3.left);
-        //    //if(cars[playerIndex].transform.rotation.eulerAngles.x > -90){
-        //    //    cars[playerIndex].transform.Rotate(new Vector3(0, -1, 0));
-        //    //}
-        //}
-        //else if (Input.GetKey(KeyCode.RightArrow)){
-        //    cars[playerIndex].transform.Translate(Vector3.right);
-        //    cars[playerIndex].transform.Rotate(new Vector3(0,0,1));
-        //}
-        //else if (Input.GetKey(KeyCode.UpArrow)){
-        //    cars[playerIndex].transform.Translate(Vector3.forward);
-        //}
-        //else if (Input.GetKey(KeyCode.DownArrow)){
-        //    cars[playerIndex].transform.Translate(Vector3.back);
-        //}
-        //Rigidbody rb = this.gameObject.transform.GetComponent<Rigidbody>();
+
+        if(health == 0)
+        {
+            EndGame();
+        }
 
     }
     void applyMovement(GameObject car)
@@ -149,8 +167,30 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         Steer();
         Accelerate();
         UpdateWheelPoses();
+        Brake();
+        
     }
+    private void Brake()
+    {
+        
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            //Debug.Log("Brake force: " + brakeForce);   
+            rearLeftCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(rearLeftCollider.rpm) * 8f, 100, 10000);
+            rearRightCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(rearRightCollider.rpm) * 8f, 100, 10000);
+            frontLeftCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(frontLeftCollider.rpm) * 8f, 100, 10000);
+            frontRightCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(frontRightCollider.rpm) * 8f, 100, 10000);
 
+            //Debug.Log(frontLeftCollider.brakeTorque);
+        }
+       else
+        {
+            rearLeftCollider.brakeTorque = 0;
+            rearRightCollider.brakeTorque = 0;
+            frontLeftCollider.brakeTorque = 0;
+            frontRightCollider.brakeTorque = 0;
+        }
+    }
     private void UpdateWheelPoses()
     {
         UpdateWheelPose(frontLeftCollider, frontLeftWheel);
@@ -167,32 +207,47 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         collider.GetWorldPose(out position, out quat);
     }
 
-    private void Accelerate()
-    {
+    private void Accelerate(){
         frontLeftCollider.motorTorque = verticalInput * motorForce;
         frontRightCollider.motorTorque = verticalInput * motorForce;
     }
 
-    private void Steer()
-    {
-        steeringAngle = maxSteeringAngle * (horizontalInput * 0.8f);
+    private void Steer(){
+        steeringAngle = maxSteeringAngle * (horizontalInput * 0.6f);
         frontLeftCollider.steerAngle = steeringAngle;
         frontRightCollider.steerAngle = steeringAngle;
-
     }
 
-    private void GetInput()
-    {
+    private void GetInput(){
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
     }
-    void shootProjectile()
-    {
+    void shootProjectile(){
         Debug.Log("Called 1");
         if (shootTimer > 0.3){
             Debug.Log("Called 2");
-            Instantiate(mainMissile, cars[playerIndex].transform.position, cars[playerIndex].transform.rotation);
+            Vector3 origPosition = cars[playerIndex].transform.Find("MissilePoint").transform.position;
+            Vector3 missilePosition = new Vector3(origPosition.x, origPosition.y, origPosition.z);
+
+            Vector3 origRotation = Quaternion.ToEulerAngles(cars[playerIndex].transform.rotation);
+            Vector3 missileRotation = new Vector3(origRotation.x + 90, origRotation.y + 90, origRotation.z + 90);
+            GameObject.Instantiate(mainMissile, missilePosition, Quaternion.Euler(missileRotation));
             shootTimer = 0;
         }
+    }
+    public void IncreaseHealth(){
+        health++;
+        healthDisplay.text += "Total Lives: " + health;
+    }
+    public void ReduceHealth(){
+        health--;
+        healthDisplay.text += "Total Lives: " + health;
+    }
+    public void EndGame(){
+        //Not fully implemented;
+        Application.Quit();
+    }
+    public int getPlayerIndex(){
+        return playerIndex;
     }
 }

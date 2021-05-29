@@ -14,90 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Missiles/BlueRocket.prefab
-    - Assets/Missiles/RedRocket.prefab
-    - Assets/MysteryBox.prefab
-    - Assets/MysteryBox.prefab.meta
-    - Assets/RPG Pack.meta
-    - Assets/RPG Pack/Animations.meta
-    - Assets/RPG Pack/Animations/BoxCrashAC.controller
-    - Assets/RPG Pack/Animations/BoxCrashAC.controller.meta
-    - Assets/RPG Pack/Animations/BoxIdleAC.controller
-    - Assets/RPG Pack/Animations/BoxIdleAC.controller.meta
-    - Assets/RPG Pack/Animations/BoxOfPandora_Idle.anim
-    - Assets/RPG Pack/Animations/BoxOfPandora_Idle.anim.meta
-    - Assets/RPG Pack/Animations/ItemsAC.controller
-    - Assets/RPG Pack/Animations/ItemsAC.controller.meta
-    - Assets/RPG Pack/DemoScene.unity
-    - Assets/RPG Pack/DemoScene.unity.meta
-    - Assets/RPG Pack/DemoSceneSettings.lighting
-    - Assets/RPG Pack/DemoSceneSettings.lighting.meta
-    - Assets/RPG Pack/Materials.meta
-    - Assets/RPG Pack/Materials/Bottle_blue.mat
-    - Assets/RPG Pack/Materials/Bottle_blue.mat.meta
-    - Assets/RPG Pack/Materials/Bottle_green.mat
-    - Assets/RPG Pack/Materials/Bottle_green.mat.meta
-    - Assets/RPG Pack/Materials/Bottle_red.mat
-    - Assets/RPG Pack/Materials/Bottle_red.mat.meta
-    - Assets/RPG Pack/Materials/Box_Of_Pandora.mat
-    - Assets/RPG Pack/Materials/Box_Of_Pandora.mat.meta
-    - Assets/RPG Pack/Materials/Coin.mat
-    - Assets/RPG Pack/Materials/Coin.mat.meta
-    - Assets/RPG Pack/Materials/Dust_particles.mat
-    - Assets/RPG Pack/Materials/Dust_particles.mat.meta
-    - Assets/RPG Pack/Materials/Glow_particles.mat
-    - Assets/RPG Pack/Materials/Glow_particles.mat.meta
-    - Assets/RPG Pack/Materials/Stars_particles.mat
-    - Assets/RPG Pack/Materials/Stars_particles.mat.meta
-    - Assets/RPG Pack/Models.meta
-    - Assets/RPG Pack/Models/Bottles.meta
-    - Assets/RPG Pack/Models/Bottles/bottle_blue.FBX
-    - Assets/RPG Pack/Models/Bottles/bottle_blue.FBX.meta
-    - Assets/RPG Pack/Models/Bottles/bottle_green.FBX
-    - Assets/RPG Pack/Models/Bottles/bottle_green.FBX.meta
-    - Assets/RPG Pack/Models/Bottles/bottle_red.FBX
-    - Assets/RPG Pack/Models/Bottles/bottle_red.FBX.meta
-    - Assets/RPG Pack/Models/Box.FBX
-    - Assets/RPG Pack/Models/Box.FBX.meta
-    - Assets/RPG Pack/Models/Coin.FBX
-    - Assets/RPG Pack/Models/Coin.FBX.meta
-    - Assets/RPG Pack/Prefabs.meta
-    - Assets/RPG Pack/Prefabs/Bottle_Endurance.prefab
-    - Assets/RPG Pack/Prefabs/Bottle_Endurance.prefab.meta
-    - Assets/RPG Pack/Prefabs/Bottle_Health.prefab
-    - Assets/RPG Pack/Prefabs/Bottle_Health.prefab.meta
-    - Assets/RPG Pack/Prefabs/Bottle_Mana.prefab
-    - Assets/RPG Pack/Prefabs/Bottle_Mana.prefab.meta
-    - Assets/RPG Pack/Prefabs/Coin.prefab
-    - Assets/RPG Pack/Prefabs/Coin.prefab.meta
-    - Assets/RPG Pack/Textures.meta
-    - Assets/RPG Pack/Textures/Bottle_blue_diff.png
-    - Assets/RPG Pack/Textures/Bottle_blue_diff.png.meta
-    - Assets/RPG Pack/Textures/Bottle_green_diff.png
-    - Assets/RPG Pack/Textures/Bottle_green_diff.png.meta
-    - Assets/RPG Pack/Textures/Bottle_red_diff.png
-    - Assets/RPG Pack/Textures/Bottle_red_diff.png.meta
-    - Assets/RPG Pack/Textures/Bottles_normal.png
-    - Assets/RPG Pack/Textures/Bottles_normal.png.meta
-    - Assets/RPG Pack/Textures/Bottles_spec.png
-    - Assets/RPG Pack/Textures/Bottles_spec.png.meta
-    - Assets/RPG Pack/Textures/BoxOfPandora_diffuse.png
-    - Assets/RPG Pack/Textures/BoxOfPandora_diffuse.png.meta
-    - Assets/RPG Pack/Textures/Coin_diffuse.png
-    - Assets/RPG Pack/Textures/Coin_diffuse.png.meta
-    - Assets/RPG Pack/Textures/Coin_normals.png
-    - Assets/RPG Pack/Textures/Coin_normals.png.meta
-    - Assets/RPG Pack/Textures/Dust_particles.tif
-    - Assets/RPG Pack/Textures/Dust_particles.tif.meta
-    - Assets/RPG Pack/Textures/sprite_radiance.tif
-    - Assets/RPG Pack/Textures/sprite_radiance.tif.meta
-    - Assets/RPG Pack/Textures/star.png
-    - Assets/RPG Pack/Textures/star.png.meta
-    - Assets/Scenes/Game.unity
     - Assets/Scripts/CarMovementScript.cs
+    - Packages/manifest.json
+    - Packages/packages-lock.json
+    - ProjectSettings/ProjectVersion.txt
     - 
-    m_Values: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  RevisionSummary: 
+    m_Values: 0100000000
+  RevisionSummary: update
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0

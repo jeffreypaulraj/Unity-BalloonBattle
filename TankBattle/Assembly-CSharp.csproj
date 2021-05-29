@@ -70,7 +70,9 @@
     <Compile Include="Assets\Scripts\MoveMissile.cs" />
     <Compile Include="Assets\Imports\World Portal System Package\Scripts\HeadBob.cs" />
     <Compile Include="Assets\Scripts\CarMovementScript.cs" />
+    <Compile Include="Assets\Scripts\SpawnMysteryBoxes.cs" />
     <Compile Include="Assets\Imports\World Portal System Package\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\Scripts\MysteryBoxCollisionManager.cs" />
     <Compile Include="Assets\Imports\World Portal System Package\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\Scripts\MenuManagerScript.cs" />
     <Compile Include="Assets\Imports\World Portal System Package\Scripts\portal.cs" />
