@@ -41,7 +41,14 @@ public class MysteryBoxCollisionManager : MonoBehaviour
         
         if (isActive && other.gameObject.CompareTag("Car")){
             //Debug.Log("On trigger entered");
-            GivePowerUp();
+            if (other.gameObject.name.Equals("Car1"))
+            {
+                GivePowerUp(0);
+            }
+            else 
+            {
+                GivePowerUp(1);
+            }
 
             box.GetComponent<MeshRenderer>().enabled = false;
             box.SetActive(false);
@@ -55,17 +62,16 @@ public class MysteryBoxCollisionManager : MonoBehaviour
             //Debug.Log("Box renderer: " + box.GetComponent<MeshRenderer>().enabled);
         }
     }
-    public void GivePowerUp(){
+    public void GivePowerUp(int player){
         System.Random rand = new System.Random();
         var n = rand.Next(0, 2);
 
         if(n == 0) {
-            carMovementScript.IncreaseHealth();
+            carMovementScript.IncreaseHealth(player);
             
         }
         else{ // n == 1
-            //networkManager.GetComponent<CarMovementScript>().RocketPowerUp(true);
-            carMovementScript.IncreaseMissileRange();
+            carMovementScript.IncreaseMissileRange(player);
         }
         
     }

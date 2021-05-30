@@ -5,8 +5,7 @@ using UnityEngine;
 public class MoveMissile : MonoBehaviour
 {
     Rigidbody rb;
-    GameObject carOne;
-    GameObject carTwo;
+   
     CarMovementScript carScript;
     bool hitFloor;
     public int missileSender;
@@ -15,11 +14,8 @@ public class MoveMissile : MonoBehaviour
     void Start(){
         rb = GetComponent<Rigidbody>();
         Debug.Log("Created");
-        //carOne = GameObject.Find("Car1");
-        //carTwo = GameObject.Find("Car2");
+        
         lifeSpan = 0;
-        hitFloor = false;
-        //transform.Rotate(0, 90, 90);
         string missileName = transform.name;
         carScript = (CarMovementScript)GameObject.Find("NetworkManager").GetComponent(typeof(CarMovementScript));
         transform.rotation = carScript.getRotation();
@@ -49,7 +45,6 @@ public class MoveMissile : MonoBehaviour
         {
             Debug.Log("Called 1");
             if (collision.gameObject.name.Contains("Car2") )
-//&& carScript.getPlayerIndex() == 1
             {
                 Debug.Log("Called 2");
                 carScript.ReducePlayerHealth(1);
@@ -64,8 +59,7 @@ public class MoveMissile : MonoBehaviour
         else
         {
             Debug.Log("Called 4");
-            if (collision.gameObject.name.Contains("Car1") )
-//&& carScript.getPlayerIndex() == 0
+            if (collision.gameObject.name.Contains("Car1"))
             {
                 Debug.Log("Called 5");
                 carScript.ReducePlayerHealth(0);
@@ -77,10 +71,7 @@ public class MoveMissile : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        //if (!collision.gameObject.name.Contains("Car") && !collision.gameObject.name.Contains("Plane"))
-        //{
-        //    Destroy(this.gameObject);
-        //}
+       
     }
 
     public void DestroyFunction(){

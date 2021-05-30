@@ -101,7 +101,6 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         }
 
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
-        //mainCamera.enabled = false;
         if (playerIndex == 0)
         {
             cameraTwo.enabled = false;
@@ -129,7 +128,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     {
         if (!lost && !enemyLost)
         {
-            //PhotonNetwork.LocalPlayer.CustomProperties.Clear();
+
             ExitGames.Client.Photon.Hashtable propertyHash = new ExitGames.Client.Photon.Hashtable();
             propertyHash.Add("Position", cars[playerIndex].transform.position);
             propertyHash.Add("Rotation", cars[playerIndex].transform.rotation);
@@ -276,13 +275,12 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            //Debug.Log("Brake force: " + brakeForce);   
+
             rearLeftCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(rearLeftCollider.rpm) * 8f, 100, 10000);
             rearRightCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(rearRightCollider.rpm) * 8f, 100, 10000);
             frontLeftCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(frontLeftCollider.rpm) * 8f, 100, 10000);
             frontRightCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(frontRightCollider.rpm) * 8f, 100, 10000);
 
-            //Debug.Log(frontLeftCollider.brakeTorque);
         }
         else
         {
@@ -340,17 +338,17 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             shootTimer = 0;
         }
     }
-    public void IncreaseHealth()
+    public void IncreaseHealth(int player)
     {
         int p1Health = (int)PhotonNetwork.CurrentRoom.CustomProperties["p1Health"];
         int p2Health = (int)PhotonNetwork.CurrentRoom.CustomProperties["p2Health"];
         int health;
-        if (playerIndex == 0 && p1Health < maxHealth)
+        if (playerIndex == 0 && p1Health < maxHealth && player == 0)
         {
             p1Health++;
             healthDisplay.text += "<sprite index= 0>  ";
         }
-        else if (playerIndex == 1 && p2Health < maxHealth)
+        else if (playerIndex == 1 && p2Health < maxHealth && player == 1)
         {
             p2Health++;
             healthDisplay.text += "<sprite index= 0>  ";
@@ -361,23 +359,9 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         setValue.Add("p2Health", p2Health);
 
         PhotonNetwork.CurrentRoom.SetCustomProperties(setValue);
-        //if (myHealth < maxHealth)
-        //{
-        //    myHealth++;
-        //    healthDisplay.text += "<sprite index= 0>  ";
-        //}
 
     }
-    //public void ReduceHealth(){
-    //    Debug.Log("Reduce Health Called");
-    //    health--;
-    //    string text = "";
-    //    for(int i = 0; i < health; i++)
-    //    {
-    //        text += "<sprite index= 0>  ";
-    //    }
-    //    healthDisplay.text = text;
-    //}
+
 
     public int getPlayerIndex()
     {
@@ -387,11 +371,13 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     {
         return cars[playerIndex].transform.rotation;
     }
-    public void IncreaseMissileRange()
+    public void IncreaseMissileRange(int player)
     {
-        missileForce += 2;
-        rocketDisplay.text = "Rocket Boost : " + (missileForce - 10);
-
+        if(player == playerIndex)
+        {
+            missileForce += 2;
+            rocketDisplay.text = "Rocket Boost : " + (missileForce - 10);
+        }
     }
 
     public void ReducePlayerHealth(int player)
@@ -430,22 +416,4 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
         healthDisplay.text = text;
 
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("Collision entered");
-    //    if (collision.gameObject.name.Contains("RedRocket") && playerIndex == 0)
-    //    {
-    //        Debug.Log("Hit By Missile");
-    //        myHealth--;
-    //        GameObject.Destroy(collision.gameObject);
-    //        Debug.Log("My Health: " + myHealth);
-    //    }
-    //    else if(collision.gameObject.name.Contains("BlueRocket") && playerIndex == 1)
-    //    {
-    //        myHealth--;
-    //        GameObject.Destroy(collision.gameObject);
-    //        Debug.Log("My Health: " + myHealth);
-    //    }
-    //}
 }

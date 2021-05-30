@@ -152,7 +152,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             for (int i = 0; i < missileArray.Length; i++)
             {
                 missilePositionArray[i] = missileArray[i].transform.position;
-                missileRotationArray[i] = cars[playerIndex].transform.rotation;
+                missileRotationArray[i] = Quaternion.Euler(cars[playerIndex].transform.forward);
 
             }
 
@@ -204,9 +204,17 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
                     Vector3[] enemyMissilePositions = (Vector3[])player.CustomProperties["MissilePositions"];
                     Quaternion[] enemyMissileRotations = (Quaternion[])player.CustomProperties["MissileRotations"];
 
+                    Quaternion enemyRotation;
+                    if(playerIndex == 0)  {
+                        enemyRotation = Quaternion.Euler(cars[1].transform.forward);
+                    }
+                    else
+                    {
+                        enemyRotation = Quaternion.Euler(cars[0].transform.forward);
+                    }
                     for (int i = 0; i < enemyMissilePositions.Length; i++)
                     {
-                        GameObject.Instantiate(enemyMissile, enemyMissilePositions[i], enemyMissileRotations[i]);
+                        GameObject.Instantiate(enemyMissile, enemyMissilePositions[i], enemyRotation);
                     }
                 }
 
