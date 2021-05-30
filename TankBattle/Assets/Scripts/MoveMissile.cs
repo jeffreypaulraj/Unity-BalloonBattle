@@ -14,20 +14,17 @@ public class MoveMissile : MonoBehaviour
     // Start is called before the first frame update
     void Start(){
         rb = GetComponent<Rigidbody>();
-        carOne = GameObject.Find("Car1");
-        carTwo = GameObject.Find("Car2");
+        Debug.Log("Created");
+        //carOne = GameObject.Find("Car1");
+        //carTwo = GameObject.Find("Car2");
         lifeSpan = 0;
         hitFloor = false;
         //transform.Rotate(0, 90, 90);
         string missileName = transform.name;
         carScript = (CarMovementScript)GameObject.Find("NetworkManager").GetComponent(typeof(CarMovementScript));
         transform.rotation = carScript.getRotation();
-        if (name.Contains("Blue")){
-            missileSender = 0;
-        }
-        else {
-            missileSender = 1;
-        }
+        Debug.Log("missilenum " + missileSender);
+        Debug.Log("playerIndex " + carScript.getPlayerIndex());
     }
 
     // Update is called once per frame
@@ -45,31 +42,48 @@ public class MoveMissile : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision){
-        if (collision.gameObject.name.Contains("Plane")){
-            hitFloor = true;
-        }
-        Debug.Log(collision.gameObject.name);
-        if (missileSender == 0){
-            if(collision.gameObject == carTwo && carScript.getPlayerIndex() == 1){
-                carScript.ReduceHealth();
-                Destroy(this.gameObject);
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collide Name: " + collision.gameObject.name);
+        if (missileSender == 0)
+        {
+            Debug.Log("Called 1");
+            if (collision.gameObject.name.Contains("Car2") )
+//&& carScript.getPlayerIndex() == 1
+            {
+                Debug.Log("Called 2");
+                carScript.ReducePlayerHealth(1);
+                Debug.Log("Called 3");
+                DestroyFunction();
             }
-            else if(collision.gameObject != carOne && !collision.gameObject.name.Contains("Plane")){
-                Destroy(this.gameObject);
-            }
-        }
-        else {
-            if (collision.gameObject == carOne && carScript.getPlayerIndex() == 0){
-                carScript.ReduceHealth();
-                Destroy(this.gameObject);
-            }
-            else if (collision.gameObject != carTwo && !collision.gameObject.name.Contains("Plane")){
+            else if (!collision.gameObject.name.Contains("Car1") && !collision.gameObject.name.Contains("Plane"))
+            {
                 Destroy(this.gameObject);
             }
         }
+        else
+        {
+            Debug.Log("Called 4");
+            if (collision.gameObject.name.Contains("Car1") )
+//&& carScript.getPlayerIndex() == 0
+            {
+                Debug.Log("Called 5");
+                carScript.ReducePlayerHealth(0);
+                Debug.Log("Called 6");
+                DestroyFunction();
+            }
+            else if (!collision.gameObject.name.Contains("Car2") && !collision.gameObject.name.Contains("Plane"))
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        //if (!collision.gameObject.name.Contains("Car") && !collision.gameObject.name.Contains("Plane"))
+        //{
+        //    Destroy(this.gameObject);
+        //}
     }
-    public void IncreaseMissileRange() {
-        carScript.missileForce += 2;
+
+    public void DestroyFunction(){
+        Destroy(this.gameObject);
     }
 }

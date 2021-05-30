@@ -7,6 +7,7 @@ public class MysteryBoxCollisionManager : MonoBehaviour
     bool isActive;
     public GameObject networkManager;
     CarMovementScript carMovementScript;
+    MoveMissile moveMissileScript;
     public GameObject box;
     float timer;
     float maxTime = 10;
@@ -19,6 +20,7 @@ public class MysteryBoxCollisionManager : MonoBehaviour
         isActive = true;
         networkManager = GameObject.Find("NetworkManager");
         carMovementScript = networkManager.GetComponent<CarMovementScript>();//(CarMovementScript)networkManager.GetComponent(typeof(CarMovementScript));
+        
     }
 
     void Update()
@@ -39,7 +41,6 @@ public class MysteryBoxCollisionManager : MonoBehaviour
     {
         
         if (isActive && other.gameObject.CompareTag("Car")){
-            //Debug.Log("On trigger entered");
             GivePowerUp();
 
             box.GetComponent<MeshRenderer>().enabled = false;
@@ -63,7 +64,8 @@ public class MysteryBoxCollisionManager : MonoBehaviour
             
         }
         else{ // n == 1
-            //moveMissile.IncreaseMissileRange();
+            //networkManager.GetComponent<CarMovementScript>().RocketPowerUp(true);
+            carMovementScript.IncreaseMissileRange();
         }
         
     }

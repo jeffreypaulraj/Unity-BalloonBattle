@@ -8,7 +8,6 @@ public class MoveMissile : MonoBehaviour
     GameObject carOne;
     GameObject carTwo;
     CarMovementScript carScript;
-    float missileForce = 10;
     bool hitFloor;
     public int missileSender;
     float lifeSpan;
@@ -35,12 +34,11 @@ public class MoveMissile : MonoBehaviour
     void Update(){
         lifeSpan += Time.deltaTime;
         if (lifeSpan >= 0.5){
-            rb.AddForce(30 * missileForce * transform.up, ForceMode.Acceleration);
+            rb.AddForce(30 * carScript.missileForce * transform.up, ForceMode.Acceleration);
         }
         else {
-            rb.AddForce(30 * missileForce * transform.forward, ForceMode.Acceleration);
+            rb.AddForce(30 * carScript.missileForce * transform.forward, ForceMode.Acceleration);
         }
-        //rb.AddForce(-5 * transform.forward, ForceMode.Acceleration);
         if (lifeSpan >= 4) {
             Destroy(this.gameObject);
         }
@@ -53,26 +51,23 @@ public class MoveMissile : MonoBehaviour
         }
         Debug.Log(collision.gameObject.name);
         if (missileSender == 0){
-            if(collision.gameObject == carTwo){
+            if(collision.gameObject == carTwo && carScript.getPlayerIndex() == 1){
                 carScript.ReduceHealth();
                 Destroy(this.gameObject);
             }
             else if(collision.gameObject != carOne && !collision.gameObject.name.Contains("Plane")){
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             }
         }
         else {
-            if (collision.gameObject == carOne){
+            if (collision.gameObject == carOne && carScript.getPlayerIndex() == 0){
                 carScript.ReduceHealth();
                 Destroy(this.gameObject);
             }
             else if (collision.gameObject != carTwo && !collision.gameObject.name.Contains("Plane")){
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             }
         }
     }
-    public void IncreaseMissileRange()
-    {
-        missileForce *= 1.2f;
-    }
+    
 }

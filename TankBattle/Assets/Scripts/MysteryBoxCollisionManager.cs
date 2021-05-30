@@ -23,8 +23,7 @@ public class MysteryBoxCollisionManager : MonoBehaviour
         
     }
 
-    void Update()
-    {
+    void Update(){
         timer += Time.deltaTime;
 
         if(!isActive && timer > maxTime){
@@ -65,8 +64,8 @@ public class MysteryBoxCollisionManager : MonoBehaviour
             
         }
         else{ // n == 1
-            networkManager.GetComponent<CarMovementScript>().RocketPowerUp(true);
-            moveMissileScript.IncreaseMissileRange();
+            //networkManager.GetComponent<CarMovementScript>().RocketPowerUp(true);
+            carMovementScript.IncreaseMissileRange();
         }
         
     }

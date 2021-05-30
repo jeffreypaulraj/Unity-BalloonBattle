@@ -8,7 +8,6 @@ public class MoveMissile : MonoBehaviour
     GameObject carOne;
     GameObject carTwo;
     CarMovementScript carScript;
-    float missileForce = 10;
     bool hitFloor;
     public int missileSender;
     float lifeSpan;
@@ -19,7 +18,6 @@ public class MoveMissile : MonoBehaviour
         carTwo = GameObject.Find("Car2");
         lifeSpan = 0;
         hitFloor = false;
-        //transform.Rotate(0, 90, 90);
         string missileName = transform.name;
         carScript = (CarMovementScript)GameObject.Find("NetworkManager").GetComponent(typeof(CarMovementScript));
         transform.rotation = carScript.getRotation();
@@ -35,10 +33,10 @@ public class MoveMissile : MonoBehaviour
     void Update(){
         lifeSpan += Time.deltaTime;
         if (lifeSpan >= 0.5){
-            rb.AddForce(30 * missileForce * transform.up, ForceMode.Acceleration);
+            rb.AddForce(30 * carScript.missileForce * transform.up, ForceMode.Acceleration);
         }
         else {
-            rb.AddForce(30 * missileForce * transform.forward, ForceMode.Acceleration);
+            rb.AddForce(30 * carScript.missileForce * transform.forward, ForceMode.Acceleration);
         }
         if (lifeSpan >= 4) {
             Destroy(this.gameObject);
@@ -70,8 +68,5 @@ public class MoveMissile : MonoBehaviour
             }
         }
     }
-    public void IncreaseMissileRange()
-    {
-        missileForce *= 1.2f;
-    }
+    
 }
