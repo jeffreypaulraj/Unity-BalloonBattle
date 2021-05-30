@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{FA470E05-34A9-DF96-F3A0-23198318BFE5}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CarMovementScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/CarMovementScript.cs" Line="230" Column="93" />
-      <File FileName="Assets/Scripts/MenuManagerScript.cs" Line="82" Column="50" />
-      <File FileName="Assets/Scripts/NetworkManagerScript.cs" Line="7" Column="48" />
-      <File FileName="Assets/Scripts/MoveMissile.cs" Line="23" Column="36" />
-      <File FileName="Assets/Scripts/MysteryBoxCollisionManager.cs" Line="22" Column="6" />
-      <File FileName="Assets/Scripts/SpawnMysteryBoxes.cs" Line="23" Column="53" />
+      <File FileName="Assets/Scripts/CarMovementScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NetworkManagerScript.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/MenuManagerScript.cs" Line="108" Column="56" />
+      <File FileName="Assets/Scripts/MoveMissile.cs" Line="70" Column="10" />
+      <File FileName="Assets/Scripts/MysteryBoxCollisionManager.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scripts/SpawnMysteryBoxes.cs" Line="19" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

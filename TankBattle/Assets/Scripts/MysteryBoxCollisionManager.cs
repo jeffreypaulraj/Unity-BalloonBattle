@@ -7,41 +7,53 @@ public class MysteryBoxCollisionManager : MonoBehaviour
     bool isActive;
     public GameObject networkManager;
     CarMovementScript carMovementScript;
-    GameObject box;
+    MoveMissile moveMissileScript;
+    public GameObject box;
     float timer;
-    float maxTime = 15;
+    float maxTime = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        box = GameObject.Find("Box001");
+        
         timer = 0;
         isActive = true;
-        carMovementScript = (CarMovementScript)networkManager.GetComponent(typeof(CarMovementScript));
+        networkManager = GameObject.Find("NetworkManager");
+        carMovementScript = networkManager.GetComponent<CarMovementScript>();//(CarMovementScript)networkManager.GetComponent(typeof(CarMovementScript));
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
 
-        if(!isActive && timer > maxTime)
-        {
-            box.GetComponent<MeshRenderer>().enabled = true;
+        if(!isActive && timer > maxTime){
+            //Debug.Log("reenabling box");
             GetComponent<BoxCollider>().enabled = true;
+
+            box.SetActive(true);
+            box.GetComponent<MeshRenderer>().enabled = true;
+
             isActive = true;
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("On trigger entered");
-        if (isActive && other.gameObject.CompareTag("Car"))
-        {
+        
+        if (isActive && other.gameObject.CompareTag("Car")){
+            //Debug.Log("On trigger entered");
             GivePowerUp();
+
             box.GetComponent<MeshRenderer>().enabled = false;
+            box.SetActive(false);
+            
+
             GetComponent<BoxCollider>().enabled = false;
+
             isActive = false;
             timer = 0;
+
+            //Debug.Log("Box renderer: " + box.GetComponent<MeshRenderer>().enabled);
         }
     }
     public void GivePowerUp(){
@@ -53,7 +65,8 @@ public class MysteryBoxCollisionManager : MonoBehaviour
             
         }
         else{ // n == 1
-            //moveMissile.IncreaseMissileRange();
+            networkManager.GetComponent<CarMovementScript>().RocketPowerUp(true);
+            moveMissileScript.IncreaseMissileRange();
         }
         
     }

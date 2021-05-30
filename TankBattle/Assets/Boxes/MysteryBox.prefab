@@ -9926,7 +9926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4000010583859816
 Transform:
   m_ObjectHideFlags: 0
@@ -15717,7 +15717,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010043812026}
   - component: {fileID: 95000011159147032}
-  - component: {fileID: 4229050824182314983}
+  - component: {fileID: 6782833092278172394}
+  - component: {fileID: 8115344680901804195}
   m_Layer: 0
   m_Name: MysteryBox
   m_TagString: Untagged
@@ -15734,7 +15735,7 @@ Transform:
   m_GameObject: {fileID: 1000014038691284}
   m_LocalRotation: {x: -0, y: 0.23970485, z: -0, w: 0.9708458}
   m_LocalPosition: {x: 10.72, y: 6.763029e-19, z: -0.30457976}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4000011684221606}
   - {fileID: 4000013874342526}
@@ -15761,7 +15762,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &4229050824182314983
+--- !u!65 &6782833092278172394
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15773,7 +15774,22 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &8115344680901804195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000014038691284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1074557b79c4b4cf6af9482029382f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkManager: {fileID: 5445249102282217910, guid: c94b29a9d342245d8a6da57ca81e269a,
+    type: 3}
+  box: {fileID: 1000014204504060}
 --- !u!1 &1000014199803242
 GameObject:
   m_ObjectHideFlags: 0

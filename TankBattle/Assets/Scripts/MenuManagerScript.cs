@@ -99,8 +99,7 @@ public class MenuManagerScript : MonoBehaviourPunCallbacks
         roomsList = new List<string>();
         roomsList.Add("Rooms Available");
 
-        foreach(Photon.Realtime.RoomInfo room in roomList)
-        {
+        foreach(Photon.Realtime.RoomInfo room in roomList){
             roomsList.Add(room.Name);
         }
     }

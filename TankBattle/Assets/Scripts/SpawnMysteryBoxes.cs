@@ -22,15 +22,10 @@ public class SpawnMysteryBoxes : MonoBehaviour
         foreach(Vector3 location in locations) {
             GameObject newBox = Instantiate(mysteryBox);
             newBox.transform.position = location;
-
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-
-        
+    void Update(){
+ 
     }
 }

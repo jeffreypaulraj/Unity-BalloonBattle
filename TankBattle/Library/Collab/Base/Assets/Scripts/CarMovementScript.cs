@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class CarMovementScript : MonoBehaviourPunCallbacks
 {
@@ -20,7 +21,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     public Camera cameraTwo;
     public GameObject missileOne;
     public GameObject missileTwo;
-    public Text healthDisplay;
+    public TextMeshPro healthDisplay;
     GameObject mainMissile;
 
     public int health = 3;
@@ -38,6 +39,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     public float motorForce;
     public float brakeForce;
     float shootTimer;
+    float maxHealth = 6;
     public float maxSteeringAngle;
 
     float steeringAngle;
@@ -88,7 +90,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             mainMissile = missileTwo;
         }
         health = 3;
-        healthDisplay.text = "Total Lives: " + health;
+        //healthDisplay.text = "Total Lives: " + health;
     }
 
     void Update(){
@@ -181,7 +183,7 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             frontLeftCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(frontLeftCollider.rpm) * 8f, 100, 10000);
             frontRightCollider.brakeTorque = Mathf.Clamp(Mathf.Abs(frontRightCollider.rpm) * 8f, 100, 10000);
 
-            Debug.Log(frontLeftCollider.brakeTorque);
+            //Debug.Log(frontLeftCollider.brakeTorque);
         }
        else
         {
@@ -229,19 +231,30 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
             Vector3 origPosition = cars[playerIndex].transform.Find("MissilePoint").transform.position;
             Vector3 missilePosition = new Vector3(origPosition.x, origPosition.y, origPosition.z);
 
-            Vector3 origRotation = Quaternion.ToEulerAngles(cars[playerIndex].transform.rotation);
+            Vector3 origRotation = Quaternion.ToEulerAngles(cars[playerIndex].transform.Find("MissilePoint").transform.rotation);
             Vector3 missileRotation = new Vector3(origRotation.x + 90, origRotation.y + 90, origRotation.z + 90);
-            GameObject.Instantiate(mainMissile, missilePosition, Quaternion.Euler(missileRotation));
+            //GameObject.Instantiate(mainMissile, missilePosition, Quaternion.Euler(missileRotation));
+            GameObject.Instantiate(mainMissile, missilePosition, Quaternion.Euler(cars[playerIndex].transform.forward));
             shootTimer = 0;
         }
     }
     public void IncreaseHealth(){
-        health++;
-        healthDisplay.text += "Total Lives: " + health;
+        if (health < maxHealth)
+        {
+            health++;
+            healthDisplay.text += "<sprite index= 0>  ";
+            //healthDisplay.text += "Total Lives: " + health;
+        }
     }
     public void ReduceHealth(){
         health--;
-        healthDisplay.text += "Total Lives: " + health;
+        string text = "";
+        for(int i = 0; i < health; i++)
+        {
+            text += "<sprite index= 0>  ";
+        }
+        healthDisplay.text = text;
+        //healthDisplay.text += "Total Lives: " + health;
     }
     public void EndGame(){
         //Not fully implemented;
@@ -249,5 +262,8 @@ public class CarMovementScript : MonoBehaviourPunCallbacks
     }
     public int getPlayerIndex(){
         return playerIndex;
+    }
+    public Quaternion getRotation(){
+        return cars[playerIndex].transform.rotation;
     }
 }
